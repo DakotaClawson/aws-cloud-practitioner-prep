@@ -1,173 +1,211 @@
 <br />
 <p align="center">
-  <h3 align="center">AWS Cloud Practitioner Prep</h3>
-
+  <h2 align="center">AWS Cloud Practitioner Exam Prep</h2>
   <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    A guide to preparing for the AWS Cloud Practitioner exam!
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/othneildrew/Best-README-Template">View AWS Exam Guide</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://www.aws.training/Details/eLearning?id=60697">AWS Cloud Practitioner Essentials Course</a>
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
   </p>
 </p>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-exam">About The Exam</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#cloud-concepts">Cloud Concepts</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#technology">Technology</a></li>
+    <li><a href="#security-&-compliance">Security & Compliance</a></li>
+    <li><a href="#billing-&-pricing">Billing & Pricing</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
+---
 
+<!-- ABOUT THE EXAM -->
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+## About The Exam
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
+Description of the exam and stuf...
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+<!-- CLOUD CONCEPTS -->
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+## Cloud Concepts ☁️
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
+### What is Cloud Computing?
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+The on-demand delivery of IT resources over the internet with pay-as-you-go pricing.
+<br />
 
-### Built With
+_Read more [here](https://aws.amazon.com/what-is-cloud-computing/)._
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+### What are the benefits of Cloud Computing?
 
+<b> Agility </b>
 
+- Access new resources within minutes!
+  <br />
 
-<!-- GETTING STARTED -->
-## Getting Started
+<b> Elasticity </b>
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+- No more guessing capactiy, the cloud will grow and shrink with your needs.
+  <br />
 
-### Prerequisites
+<b> Cost Savings </b>
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+- The aggregated cloud usage from a large number of customers results in lower pay-as-you-go prices.
+  <br />
 
-### Installation
+<b> Deploy Globally in Minutes </b>
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
+- Deploy applications to customers around the world quickly with LOW latency.
 
+### Deployment Models
 
+1. Cloud Based
 
-<!-- USAGE EXAMPLES -->
-## Usage
+- Run all parts of the application in the cloud.
+- Migrate existing applications to the cloud.
+- Design and build new applications in the cloud.
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+2. On-Premises (Private)
+
+- Deploy resources by using virtualization and resource management tools.
+- Increase resource utilization by using application management and virtualization technologies.
+
+3. Hybrid
+
+- Connect cloud-based resources to on-premises infrastructure.
+- Integrate cloud-based resources with legacy IT applications.
+
+### Types of Cloud Computing
+
+1. <b> Infrastructure as a Service (IaaS) </b>
+   <br/>
+   Think of this as a foundation... you're just laying building blocks! 🧱
+
+   - First layer / Lowest Level
+   - Computer, Network, Storage
+   - Flexible
+   - Users: Traditional IT, Government, Universities
+
+2. <b> Platform as a Service (PaaS) </b>
+   <br/>
+   Need to run a python web app? Need to be able to support Node.js? No problem! Support within a click of a button. ✅
+
+   - Second Layer
+   - Removes management of underlying hardware
+   - Macroscopic Planning
+   - Users: Individuals, Developers, Small Startups
+
+3. <b> Software as a Service (SaaS) </b>
+   <br/>
+   Want to get something done without worrying about the logistics of how to do it? Simply sign in and start on your task! 👩‍💻
+
+   - Third Layer / Highest Level
+   - Capabilities and Hardware are abstracted
+   - End User Software (Marketing, Email Services, etc...)
+   - Users: Non-technical Users, Office, Students
+
+### Compute in the Cloud
+
+<h3 align="center">Amazon Elastic Compute Cloud (Amazon EC2)</h3>
+
+Think of a server in a coffee shop. A customer makes a request (small cup of coffee) to the server. The server executes this request and delivers it to the customer (or client). Amazon EC2 is the server in this scenario.
+
+### Global Infrastructure and the AWS Advantage
+
+There are cloud centers all over the world... need to expand your user base to Ireland? No problem- just one click away.
+
+There are often multiple cloud centers in a region (availability zones). This ensures there is always coverage in case of any issues.
+
+Benefits of AWS
+
+- Easy to Use
+- Flexible
+- Cost-Effective
+  <br/>
+  You only pay for what you USE!
+- Reliable
+  <br />
+  Hardware is not your responsibility.
+- Scalable and high-performance
+  <br />
+  Automate scalability- or get it in just a few clicks!
+  <br />
+  Get guarantees in network performance. Faster speeds!
+- Secure
+  <br />
+  Physical building security to software updates... they have you covered.
+
+<!-- TECHNOLOGY -->
+
+## Technology 💻
+
+### IAM: Access Management in AWS
+
+- Groups
+- Users
+  - Access Types:
+    - Programmatic Access
+    - AWS Management Console Access
+- Roles
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
+<!-- SECURITY & COMPLIANCE -->
 
+## Security & Compliance 🔒
 
-<!-- ROADMAP -->
-## Roadmap
+<!-- BILLING & PRICING -->
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
+## Billing & Pricing 💵
 
 <!-- CONTACT -->
+
 ## Contact
 
 Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
-
-
 <!-- ACKNOWLEDGEMENTS -->
+
 ## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
 
-
-
-
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Img Shields](https://shields.io)
+- [Choose an Open Source License](https://choosealicense.com)
+- [GitHub Pages](https://pages.github.com)
+- [Animate.css](https://daneden.github.io/animate.css)
+- [Loaders.css](https://connoratherton.com/loaders)
+- [Slick Carousel](https://kenwheeler.github.io/slick)
+- [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
+- [Sticky Kit](http://leafo.net/sticky-kit)
+- [JVectorMap](http://jvectormap.com)
+- [Font Awesome](https://fontawesome.com)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
 [contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
