@@ -131,6 +131,75 @@ _Read more [here](https://aws.amazon.com/what-is-cloud-computing/)._
 
 Think of a server in a coffee shop. A customer makes a request (small cup of coffee) to the server. The server executes this request and delivers it to the customer (or client). Amazon EC2 is the server in this scenario.
 
+<b>How Amazon EC2 works</b>
+
+1. Launch an instance
+2. Connect to an instance
+3. Use it! 🎉
+
+EC2 runs on top of physical host machines managed by AWS using virtualization technology (Virtual Machines).
+
+- This idea of sharing underlying hardware is called multitenancy.
+
+<b>Amazon EC2 Instance Types</b>
+<br />
+Each EC2 instance type is grouped under an instance family.
+<br />
+
+- General Purpose
+  - balanced resources
+- Compute Optimized
+  - high performance processors
+- Memory Optimized
+  - process large datasets
+- Accelerated Computing
+  - hardware accelerators
+- Storage Optimized
+  - high, sequential read and write access to large datasets on local storage
+
+<b>Amazon EC2 Purchase Options</b>
+<br />
+You only pay for the compute time that you use
+<br />
+
+- On-demand
+  - short-term irregular workloads
+- Amazon EC2 Savings Plans
+  - commit to a 1-year or 3-year term
+  - up to 72% off over On-Demand
+- Reserved Instances
+  - predictable usage
+  - pay all, partial, or none up-front
+  - commit to a 1-year or 3-year term
+- Spot Instances
+  - do not require contracts or commitments
+  - use unused Amazon EC2 computing capacity (AWS can reclaim at any time)
+  - up to 90% off On-Demand
+- Dedicated Hosts
+  - fully dedicated to your use
+
+<b>Amazon EC2 Auto Scaling</b>
+<br />
+Enables you to automatically add or remove Amazon EC2 instances in response to changing application demand.
+<br />
+Two approaches:
+<br />
+
+- Dynamic scaling --> responds to changing demand.
+- Predictive scaling --> automatically schedules the right number of Amazon EC2 instances based on predicted demand.
+
+Set Number of EC2 Instances:
+<br />
+
+- <i>Minimum capacity</i> is the number of Amazon EC2 instances that launch immediately after you have created the Auto Scaling group.
+- <i>Desired capactiy</i>
+- <i>Maximum capacity</i>
+
+<b>Elastic Load Balancing</b>
+<br />
+Enables you to automatically add or remove Amazon EC2 instances in response to changing application demand.
+<br />
+
 ### Global Infrastructure and the AWS Advantage
 
 There are cloud centers all over the world... need to expand your user base to Ireland? No problem- just one click away.
