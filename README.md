@@ -46,6 +46,8 @@
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 Description of the exam and stuf...
 
+---
+
 <!-- CLOUD CONCEPTS -->
 
 ## Cloud Concepts ☁️
@@ -164,6 +166,7 @@ You only pay for the compute time that you use
 
 - On-demand
   - short-term irregular workloads
+  - most flexible with NO contract
 - Amazon EC2 Savings Plans
   - commit to a 1-year or 3-year term
   - up to 72% off over On-Demand
@@ -182,8 +185,6 @@ You only pay for the compute time that you use
 <br />
 Enables you to automatically add or remove Amazon EC2 instances in response to changing application demand.
 <br />
-Two approaches:
-<br />
 
 - Dynamic scaling --> responds to changing demand.
 - Predictive scaling --> automatically schedules the right number of Amazon EC2 instances based on predicted demand.
@@ -199,31 +200,115 @@ Set Number of EC2 Instances:
 <br />
 Enables you to automatically add or remove Amazon EC2 instances in response to changing application demand.
 <br />
+In short, this works to evenly distribute traffic so servers don't get overwhelmed!
+<br />
 
-### Global Infrastructure and the AWS Advantage
+<b>Messaging and queuing</b>
+<br />
+<i>Monolithic application</i>: when one component fails, all fail.
+<br />
+A <i>microservices approach</i> solves this issue with loosely coupled components.
+<br />
+
+> Amazon Simple Queue Service (Amazon SQS)
+
+Send, store, and receive messages between software components, without losing messages or requiring other services to be available.
+
+Messages remain in queue until consumed OR deleted.
+
+> Amazon Simple Notification Service (Amazon SNS)
+
+A publish/subscribe service. Using Amazon SNS topics, a publisher publishes messages to subscribers.
+
+### Additional Compute Services
+
+1.  Serverless Computing
+
+    The term “serverless” means that your code runs on servers, but you do not need to provision or manage these servers.
+
+    🧠 Focus more on innovating new products and features instead of maintaining servers.
+
+    > AWS Lambda
+
+    Service that lets you run code WITHOUT needing to provision or manage servers.
+
+    - Only pay for the compute time you consume
+    - Run code with zero administration
+
+2.  Containers
+
+    A standard way to package your application's code and dependencies into a single object.
+
+    The following services provide container orchestration:
+
+    > Amazon Elastic Container Service (Amazon ECS)
+
+    Highly scalable, high-performance container management system that enables you to run and scale containerized applications on AWS. - Supports Docker 🐋 - Build, test, and deploy applications quickly
+
+    > Amazon Elastic Kubernetes Service (Amazon EKS)
+
+    Fully managed service that you can use to run Kubernetes on AWS. - Deploy and manage containerized applications at scale
+
+You can use these services with EC2 instances OR:
+
+> AWS Fargate
+
+Serverless compute engine for containers. It works with both Amazon ECS and Amazon EKS.
+
+- Manages your server infrastructure for you
+
+### Global Infrastructure and Reliability
 
 There are cloud centers all over the world... need to expand your user base to Ireland? No problem- just one click away.
 
-There are often multiple cloud centers in a region (availability zones). This ensures there is always coverage in case of any issues.
+<b> Region </b>
+
+Data centers are built in REGIONS. This ensures there is always coverage in case of any issues. (i.e natural disasters)
+User will choose which region they want to run out of.
+
+Factors in picking a region:
+
+- Compliance (Regulations, laws, etc)
+- Proximity (Where's your customers?)
+- Feature Availability (Region may not have the features you want due to hardware)
+- Pricing (Some locations are more expensive to operate in)
+
+<b> Availability Zone </b>
+
+A single data center or a group of data centers within a Region.
+
+<b> Edge Location </b>
+
+> Amazon CloudFront
+
+Stores cached copies of your content closer to your customers in 'edge locations' for faster delivery.
+
+> AWS Outposts
+
+AWS will build and store a mini-region in your own data center.
+
+<b> Utilizing AWS Services </b>
+
+In AWS, everything is an API call (application programming interface).
+
+Interact using:
+
+> AWS Management Console
+
+> AWS Command Line Interface (CLI)
+
+> AWS Software Development Kits (SDKs)
 
 Benefits of AWS
 
 - Easy to Use
 - Flexible
 - Cost-Effective
-  <br/>
-  You only pay for what you USE!
 - Reliable
-  <br />
-  Hardware is not your responsibility.
 - Scalable and high-performance
-  <br />
-  Automate scalability- or get it in just a few clicks!
-  <br />
-  Get guarantees in network performance. Faster speeds!
 - Secure
-  <br />
-  Physical building security to software updates... they have you covered.
+
+---
 
 <!-- TECHNOLOGY -->
 
@@ -240,9 +325,13 @@ Benefits of AWS
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
+---
+
 <!-- SECURITY & COMPLIANCE -->
 
 ## Security & Compliance 🔒
+
+---
 
 <!-- BILLING & PRICING -->
 
