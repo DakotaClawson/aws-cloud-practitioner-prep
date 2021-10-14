@@ -210,15 +210,13 @@ In short, this works to evenly distribute traffic so servers don't get overwhelm
 A <i>microservices approach</i> solves this issue with loosely coupled components.
 <br />
 
-> Amazon Simple Queue Service (Amazon SQS)
+> <b>Amazon Simple Queue Service (Amazon SQS)</b> <br />
+> Send, store, and receive messages between software components, without losing messages or requiring other services to be available.
+>
+> - Messages remain in queue until consumed OR deleted.
 
-Send, store, and receive messages between software components, without losing messages or requiring other services to be available.
-
-Messages remain in queue until consumed OR deleted.
-
-> Amazon Simple Notification Service (Amazon SNS)
-
-A publish/subscribe service. Using Amazon SNS topics, a publisher publishes messages to subscribers.
+> <b>Amazon Simple Notification Service (Amazon SNS)</b> <br />
+> A publish/subscribe service. Using Amazon SNS topics, a publisher publishes messages to subscribers.
 
 ### Additional Compute Services
 
@@ -228,12 +226,11 @@ A publish/subscribe service. Using Amazon SNS topics, a publisher publishes mess
 
     🧠 Focus more on innovating new products and features instead of maintaining servers.
 
-    > AWS Lambda
-
-    Service that lets you run code WITHOUT needing to provision or manage servers.
-
-    - Only pay for the compute time you consume
-    - Run code with zero administration
+    > <b> AWS Lambda </b> <br />
+    > Service that lets you run code WITHOUT needing to provision or manage servers.
+    >
+    > - Only pay for the compute time you consume
+    > - Run code with zero administration
 
 2.  Containers
 
@@ -241,26 +238,33 @@ A publish/subscribe service. Using Amazon SNS topics, a publisher publishes mess
 
     The following services provide container orchestration:
 
-    > Amazon Elastic Container Service (Amazon ECS)
+    > <b> Amazon Elastic Container Service (Amazon ECS) </b> <br />
+    > Highly scalable, high-performance container management system that enables you to run and scale containerized applications on AWS.
+    >
+    > - Supports Docker 🐋
+    > - Build, test, and deploy applications quickly
 
-    Highly scalable, high-performance container management system that enables you to run and scale containerized applications on AWS. - Supports Docker 🐋 - Build, test, and deploy applications quickly
-
-    > Amazon Elastic Kubernetes Service (Amazon EKS)
-
-    Fully managed service that you can use to run Kubernetes on AWS. - Deploy and manage containerized applications at scale
+- > <b>Amazon Elastic Kubernetes Service (Amazon EKS)</b> <br />
+  > Fully managed service that you can use to run Kubernetes on AWS.
+  >
+  > - Deploy and manage containerized applications at scale
 
 You can use these services with EC2 instances OR:
 
-> AWS Fargate
-
-Serverless compute engine for containers. It works with both Amazon ECS and Amazon EKS.
+> <b>AWS Fargate</b> <br />
+> Serverless compute engine for containers. It works with both Amazon ECS and Amazon EKS.
 
 - Manages your server infrastructure for you
 
 ### Global Infrastructure and Reliability
 
+<br />
+Data center clusters 🏢 → Availability Zones 📍 → Regions 🌎
+<br />
+<br />
 There are cloud centers all over the world... need to expand your user base to Ireland? No problem- just one click away.
-
+<br />
+<br />
 <b> Region </b>
 
 Data centers are built in REGIONS. This ensures there is always coverage in case of any issues. (i.e natural disasters)
@@ -279,40 +283,105 @@ A single data center or a group of data centers within a Region.
 
 <b> Edge Location </b>
 
-> Amazon CloudFront
+> <b>Amazon CloudFront</b> <br />
+> A content delivery service. It uses a network of edge locations to cache content and deliver content to customers all over the world.
 
-Stores cached copies of your content closer to your customers in 'edge locations' for faster delivery.
-
-> AWS Outposts
-
-AWS will build and store a mini-region in your own data center.
+> <b>AWS Outposts</b> <br />
+> AWS will build and store a mini-region in your own data center.
 
 <b> Utilizing AWS Services </b>
 
-In AWS, everything is an API call (application programming interface).
+In AWS, EVERYTHING is an API call (application programming interface).
 
 Interact using:
 
-> AWS Management Console
+> <b>AWS Management Console</b>
 
-> AWS Command Line Interface (CLI)
+> <b> AWS Command Line Interface (CLI) </b>
 
-> AWS Software Development Kits (SDKs)
+> <b> AWS Software Development Kits (SDKs) </b> <br/>
+> Enables you to use AWS services with your existing applications or create entirely new applications that will run on AWS.
 
-Benefits of AWS
+Provision Amazon EC2-based environments:
 
-- Easy to Use
-- Flexible
-- Cost-Effective
-- Reliable
-- Scalable and high-performance
-- Secure
+> <b>AWS Elastic Beanstalk</b><br />
+> Helps you focus on business app, NOT infrastructure. <br />
+> Deploys the resources necessary to perform the following tasks:
+>
+> - Adjust capacity
+> - Load balancing
+> - Automatic scaling
+> - Application health monitoring
+
+> <b>AWS CloudFormation</b><br />
+> Infrastructure as code tool allows you to define wide variety of AWS resources. <br />
+> Use JSON or yml text files to create a template for your environment.
 
 ---
 
 <!-- TECHNOLOGY -->
 
 ## Technology 💻
+
+### Connecting to AWS
+
+<b> Virtual Private Cloud (VPC) </b> <br/>
+Your own private network in AWS. A VPC allows you to define your private IP range for your AWS resources, and you place things like EC2 instances and ELBs inside of your VPC.
+
+_Note: You place things into different subnets._
+
+<b> Subnets </b> <br />
+Chunks of IP addresses in your VPC that allow you to group resources together.
+
+<b> Internet Gateway (IGW) </b> <br />
+Attaching this to your VPC allows public traffic from the internet to access your VPC.
+
+- Think of an internet gateway as being similar to a doorway that customers use to enter a coffee shop.
+
+<b> Virtual Private Gateway </b> <br />
+Allows access to private resources in a VPC.
+
+- You are still using the same road as everyone else, but with an extra layer of protection. (Think of a bodyguard 💪)
+
+> <b> AWS Direct Connect </b> <br />
+> Enables you to establish a dedicated private connection between your on-premises data center and a VPC.
+>
+> - helps you to reduce network costs
+> - increase the amount of bandwidth that can travel through your network
+
+### Subnets and network access control lists
+
+<b> Packet </b> <br />
+A unit of data sent over the internet or a network.
+
+<b> Network Access Control List (ACL) </b> <br />
+Virtual firewall that controls inbound and outbound traffic at the subnet level.
+
+- Think of it this as a passport control officer for 'packets'! 🛂
+
+<b>Stateless Packet Filtering</b> <br />
+They remember nothing and check packets that cross the subnet border each way: inbound and outbound.
+
+_Stateless ALLOWS all inbound traffic by default._ 🟢
+
+<b>Stateful Packet Filtering</b> <br />
+They remember previous decisions made for incoming packets. <br />
+
+The VPC that checks the packet permissions is known as a <b>Security Group</b>. <br />
+
+_Stateful DENIES all inbound traffic by default._ 🔴
+
+### Global Networking
+
+<b>Domain Name System (DNS)</b><br />
+The phonebook of the internet! DNS resolution is the process of translating a domain name to an IP address.
+
+> <b>Amazon Route 53</b><br />
+> a DNS web service. It gives customers a reliable way to route end users to internet applications hosted in AWS.
+>
+> - manage the DNS records for domain names
+
+### Databases and Storage
 
 ### IAM: Access Management in AWS
 
@@ -337,17 +406,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Billing & Pricing 💵
 
-<!-- CONTACT -->
+<!-- RESOURCES -->
 
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## Acknowledgements
+## Resources
 
 - [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 - [Img Shields](https://shields.io)
