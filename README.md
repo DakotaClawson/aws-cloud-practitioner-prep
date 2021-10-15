@@ -8,8 +8,6 @@
     <a href="https://github.com/othneildrew/Best-README-Template">View AWS Exam Guide</a>
     ·
     <a href="https://www.aws.training/Details/eLearning?id=60697">AWS Cloud Practitioner Essentials Course</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
   </p>
 </p>
 
@@ -383,14 +381,86 @@ The phonebook of the internet! DNS resolution is the process of translating a do
 
 ### Databases and Storage
 
-### IAM: Access Management in AWS
+<b>Instance Store</b><br />
+Temporary block-level storage for an Amazon EC2 instance.
 
-- Groups
-- Users
-  - Access Types:
-    - Programmatic Access
-    - AWS Management Console Access
-- Roles
+- Disk storage that is physically attached to the host computer for an EC2 instance
+- When the instance is terminated, you LOSE any data in the instance store
+
+> <b>Amazon Elastic Block Store (Amazon EBS)</b><br />
+> Provides block-level storage volumes that you can use with Amazon EC2 instances.
+>
+> - If you stop or terminate an Amazon EC2 instance, all the data on the attached EBS volume remains available
+
+<b>EBS Snapshot</b><br />
+
+- First backup taken of a volume copies all the data
+- Subsequent backups only saves the blocks of data that have changed
+
+<b>Object Storage</b><br />
+Each object consists of:
+
+- data
+- metadata
+- key
+
+> <b>Amazon Simple Storage Service (Amazon S3)</b><br />
+> Provides object-level storage, storing data as objects in buckets. 🪣
+>
+> - Max object file size is 5 TB
+> - Configure R/W permissions
+> - Version control
+
+<b>Amazon S3 Storage Classes</b>
+
+When choosing, consider these two factors:
+
+1. How often you plan to retrieve your data
+2. How available you need your data to be
+
+_Sorted by price: High to Low_
+
+- <b>Standard</b>
+
+  - Frequently accessed data
+  - Stores data in a minimum of three Availability Zones
+
+- <b>Standard-Infrequent Access (S3 Standard-IA)</b>
+
+  - Infrequently accessed data
+  - Similar to S3 Standard but has a lower storage price and higher retrieval price
+
+- <b>One Zone-Infrequent Access (S3 One Zone-IA)</b>
+
+  - Stores data in a single Availability Zone
+  - Has a lower storage price than S3 Standard-IA
+  - Save costs on storage
+  - Good if you can reproduce your data in the event of an Availability Zone failure
+
+- <b>Intelligent-Tiering</b>
+
+  - Ideal for data with unknown or changing access patterns
+  - Small monthly monitoring and automation fee per object
+
+- <b>Glacier</b>
+
+  - Low-cost storage designed for data archiving
+  - Retrieve objects within a few minutes to hours
+  - Ideal for data archiving
+
+- <b>Glacier Deep Dive</b>
+  - Lowest-cost object storage class ideal for archiving
+  - Retrieve objects within 12 hours
+
+<b>Amazon EBS vs Amazon S3</b>
+
+Using complete objects or only occasional changes? S3 is victorious.
+
+- S3 uses 'object' storage, meaning if changes are made the WHOLE file needs to be uploaded.
+
+Doing complex read, write, change functions? EBS is your knockout winner.
+
+- EBS uses 'block' storage, meaning only the changes made are uploaded.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
