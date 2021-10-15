@@ -287,7 +287,7 @@ A single data center or a group of data centers within a Region.
 > <b>AWS Outposts</b> <br />
 > AWS will build and store a mini-region in your own data center.
 
-<b> Utilizing AWS Services </b>
+### Utilizing AWS Services
 
 In AWS, EVERYTHING is an API call (application programming interface).
 
@@ -391,6 +391,7 @@ Temporary block-level storage for an Amazon EC2 instance.
 > Provides block-level storage volumes that you can use with Amazon EC2 instances.
 >
 > - If you stop or terminate an Amazon EC2 instance, all the data on the attached EBS volume remains available
+> - Stores data in a _single_ Availability Zone.
 
 <b>EBS Snapshot</b><br />
 
@@ -462,7 +463,73 @@ Doing complex read, write, change functions? EBS is your knockout winner.
 
 - EBS uses 'block' storage, meaning only the changes made are uploaded.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+> <b>Amazon Elastic File System (Amazon EFS)</b><br />
+> Scalable file system used with AWS Cloud services and on-premises resources.
+>
+> - Stores data across _multiple_ Availability Zones
+
+> <b>Amazon Relational Database Service (Amazon RDS)</b><br />
+> Enables you to run relational databases in the AWS Cloud. <br />
+> Automates tasks such as hardware provisioning, database setup, patching, and backups.
+>
+> - Uses more overhead because the DB is more complex
+> - SQL
+
+<b>Amazon RDS database engines</b><br />
+Amazon RDS is available on _six_ database engines:
+
+1. Amazon Aurora
+2. PostgreSQL
+3. MySQL
+4. MariaDB
+5. Oracle Database
+6. Microsoft SQL Server
+
+<b>Amazon Aurora</b><br />
+An enterprise-class relational database
+
+- Compatible with MySQL and PostgreSQL relational databases
+- Replicates six copies of your data across three Availability Zones
+- Continuously backs up your data to Amazon S3
+
+> <b>Amazon DynamoDB</b><br />
+> Key-value database service for non-relational database schemas. <br />
+>
+> - Serverless (don't have to maintain servers or install OS)
+> - Automatically scales to fit capacity
+> - No SQL
+> - Very fast
+
+> <b>Amazon Redshift</b><br />
+> Data warehousing service that you can use for big data analytics <br />
+>
+> - Collect data from many sources
+> - Understand relationships and trends across your data
+
+> <b>AWS Database Migration Service (AWS DMS)</b><br />
+> Migrate relational databases, nonrelational databases, and other types of data stores. <br />
+>
+> - Collect data from many sources
+> - Understand relationships and trends across your data <br />
+>   Works well for:
+> - DB consolidation
+> - Continous replication
+> - Development and test migrations
+
+### Additional Database Services
+
+- <b>Amazon DocumentDB</b><br />
+  - document database service that supports MongoDB workloads
+- <b>Amazon Neptune</b><br />
+  - a graph database service
+- <b>Amazon Quantum Ledger Database (Amazon QLDB)</b><br />
+  - a ledger database service allows you to review a complete history of all changes
+- <b>Amazon Manages Blockchain</b><br />
+  - create and manage blockchain networks with open-source frameworks
+- <b>Amazon ElastiCache</b><br />
+  - adds caching layers on your databases to improve read times of common requests
+- <b>Amazon DynamoDB Accelerator</b><br />
+  - in-memory cache for DynamoDB improves response times
 
 ---
 
