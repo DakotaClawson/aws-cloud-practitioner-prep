@@ -5,7 +5,7 @@
     A guide to preparing for the AWS Cloud Practitioner exam!
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View AWS Exam Guide</a>
+    <a href="https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf">View AWS Exam Guide</a>
     ·
     <a href="https://www.aws.training/Details/eLearning?id=60697">AWS Cloud Practitioner Essentials Course</a>
   </p>
@@ -537,11 +537,381 @@ An enterprise-class relational database
 
 ## Security & Compliance 🔒
 
+### Shared Responsibility Model
+
+🏠 Think of a house- the sturdy walls, floors, and foundation are AWS's responsibility. As a customer, you're responsible for locking the door. It's that simple!
+
+AWS Responsibilities (Security OF the Cloud):
+
+- Physical (They own the concrete and staff the bodyguards)
+- Network
+- Hypervisor
+
+Customer Responsibilites (Security IN the Cloud):
+
+- Operating System (Windows, macOs, etc)
+- Application
+- Data
+
+### User Permissions and Access
+
+<b>AWS Identity and Access Management (IAM)</b><br />
+Manage access to AWS services and resources securely.
+
+- IAM users, groups, and roles
+- IAM policies
+- Turn on multi-factor authentication!<br />
+  _Note: Do NOT use the root user for everyday tasks_
+
+<b>AWS Organizations</b><br />
+
+- Centralized management
+- Consolidated billing
+- Hierarchical grouping
+- AWS Service and API action access control<br />
+  _Note: Auto creates a root user/parent container_
+
+<b>Organizational Units (OU)</b><br />
+Easily give users access to the services and resources they need while preventing them from accessing any services or resources that they do not need.
+
+<b>Service Control Policies (SCPs)</b><br />
+Place restrictions on the AWS services, resources, and individual API actions that users and roles in each account can access.
+
+Can be applied to:
+
+- Organization root
+- Individual member account
+- OU
+
+### Compliance
+
+<b>AWS Artifact</b><br />
+Provides on-demand access to AWS security and compliance reports and select online agreements.
+
+Two main sections:
+
+1. AWS Artifact Agreements
+   - Review, accept, and manage agreements
+2. AWS Artifact Reports
+   - Provide compliance reports from third-party auditors
+
+<b>Customer Compliance Center</b><br/>
+Contains resources to help you learn more about AWS compliance.
+
+### Denial-of-service attacks (DoS)
+
+A deliberate attempt to make a website or application unavailable to users.
+
+Think of a prankster is calling in multiple times to place orders but is never picking up their drinks.
+
+<b>Distributed denial-of-service attacks (DDoS)</b><br />
+Now, suppose that the prankster has enlisted the help of friends.
+
+Multiple sources are used to start an attack that aims to make a website or application unavailable.
+
+> <b>AWS Shield</b><br />
+> Protects applications against DDoS attacks. <br />
+> AWS Shield provides two levels of protection:
+>
+> 1.  Standard
+>     - automatically protects all AWS customers at no cost
+> 2.  Advanced
+>     - paid service provides detailed attack diagnostics and ability to detect and mitigate sophisticated DDoS attacks
+
+### Additional Security Services
+
+> <b>AWS Key Management Service (AWS KMS)</b><br />
+> Perform encryption operations through the use of cryptographic keys
+>
+> - random string of digits used for locking (encrypting) and unlocking (decrypting) data
+
+> <b>AWS WAF</b><br />
+> Web app firewall that lets you monitor network requests that come into your web apps.
+>
+> - Works with Amazon CloudFront and Application Load Balancer
+> - Protects AWS resources with web access control list (ACL)
+
+<b>Amazon Inspector</b><br />
+Improve the security and compliance of applications by running automated security assessments.
+
+<b>Amazon GuardDuty</b><br />
+Provides intelligent threat detection for your AWS infrastructure and resources.
+
+- Continuously monitors network activity and account behavior in your AWS environment
+
+### Monitoring and Analytics
+
+<b>Amazon CloudWatch</b><br />
+Monitor and manage various metrics and configure alarm actions based on data from those metrics.
+
+- Create _alarms_ that automatically perform actions if the value of your metric has gone above or below a predefined threshold
+- _Dashboard_ feature enables you to access all the metrics for your resources from a single location
+
+> <b>AWS CloudTrail</b><br />
+> Records API calls for your account. Identity, the time, the source IP address, and more. Think of CloudTrail as a “trail” of breadcrumbs (or a log of actions) that someone has left behind them.
+>
+> - Enable _CloudTrail Insights_ to automatically detect unusual API activities
+
+> <b>AWS Trusted Advisor</b><br />
+> Inspects your AWS environment and provides real-time recommendations in accordance with AWS best practices. <br />
+> Compares findings to AWS best practices in five categories:
+>
+> 1. Cost optimization
+> 2. Performance
+> 3. Security
+> 4. Fault tolerance
+> 5. Service limits <br />
+>
+> ✅ Indicates number of items for which it detected no _problems_ <br />
+> ⚠️ Represents the number of recommended _investigations_ <br />
+> 🔴 Represents the number of recommended _actions_
+
 ---
 
 <!-- BILLING & PRICING -->
 
 ## Billing & Pricing 💵
+
+> <b>AWS Free Tier</b><br />
+>
+> - Always Free
+> - 12 Months Free
+> - Trials
+>   - Short-term free trial offers start from date you activate a particular service. Length of each trial might vary by number of days or the amount of usage in the service.
+
+### AWS Pricing Concepts
+
+- Pay for what you use.
+- Pay less when you reserve.
+- Pay less with volume-based discounts when you use more.
+
+<b>AWS Pricing Calculator</b><br />
+Explore AWS services and create an estimate for the cost of your use cases on AWS.
+
+<b>AWS Billing & Cost Management dashboard</b><br />
+Pay your AWS bill, monitor your usage, and analyze and control your costs.
+
+<b>Consolidated Billing</b><br />
+AWS Organizations provides the option for consolidated billing. Enables you to receive a single bill for all AWS accounts in your organization.
+
+- Simplifies billing process
+- Share savings across accounts
+- Free feature
+
+<b>AWS Budgets</b><br />
+Create budgets to plan your service usage, service costs, and instance reservations.
+
+- Updates 3x a day
+- Set custom alerts when usage exceeds (or is forecasted to exceed) the budgeted amount
+
+<b>AWS Cost Explorer</b><br />
+Visualize, understand, and manage your AWS costs and usage over time.
+
+- Default report of the costs and usage for your top five cost-accruing AWS services
+
+### AWS Support Plans
+
+AWS offers four different Support plans to help you troubleshoot issues, lower costs, and efficiently use AWS services.
+
+1. Basic
+   - Free
+   - Access to whitepapers, documentation, and support communities
+   - Contact AWS for billing questions and service limit increases
+   - LIMITED AWS Trusted Advisor checks
+   - <b>AWS Personal Health Dashboard</b>: provides alerts and remediation guidance when AWS is experiencing events that may affect you
+2. Developer\*
+   - Best practice guidance
+   - Client-side diagnostic tools
+   - Building-block architecture support (guidance for how to use AWS offerings, features, and services together)
+3. Business\*
+   - Use-case guidance to identify AWS offerings, features, and services that best support your needs
+   - ALL AWS Trusted Advisor checks
+   - Limited support for third-party software (common operating systems and application stack components)
+4. Enterprise\*
+   - Application architecture guidance
+   - Infrastructure event management: A short-term engagement with AWS Support that helps your company gain a better understanding of your use cases. Provides your company with architectural and scaling guidance.
+   - A Technical Account Manager
+
+_\*Pay-by-the-month pricing and NO long-term contracts_
+
+<b>Technical Account Manager (TAM)</b><br/>
+If you have an Enterprise Support plan, the TAM is your primary point of contact at AWS. They provide guidance, architectural reviews, and ongoing communication with your company as you plan, deploy, and optimize your applications.
+
+- Provides expertise across the full range of AWS services
+- Help you design solutions that efficiently use multiple services together through an integrated approach
+
+### AWS Marketplace
+
+A digital catalog that includes thousands of software listings from independent software vendors. Find, test, and buy software that runs on AWS.
+
+AWS Marketplace Categories
+
+- Business Apps
+- Data & Analytics
+- Devops
+- Infrastructure Software
+- Internet of Things (IoT)
+- Machine Learning
+- Migration
+- Security
+
+<!-- MIGRATION AND INNOVATION -->
+
+## Migration and Innovation
+
+> <b>AWS Cloud Adoption Framework (AWS CAF)</b><br />
+> Organizes guidance into six areas of focus, called Perspectives.<br />
+>
+> - Business, People, and Governance Perspectives focus on _business_ capabilities.
+> - Platform, Security, and Operations Perspectives focus on _technical_ capabilities.
+
+Business
+
+- Ensures IT aligns with business needs and that IT investments link to key business results.<br />
+  Common roles:
+  - Business managers
+  - Finance managers
+  - Budget owners
+  - Strategy stakeholders
+
+People
+
+- Supports development of organization-wide change management strategy for successful cloud adoption.<br />
+  Common roles:
+  - Human resources
+  - Staffing
+  - People managers
+
+Governance
+
+- Focuses on skills and processes to align IT strategy with business strategy. Ensures you maximize the business value and minimize risks.<br />
+  Common roles:
+  - Chief Information Officer (CIO)
+  - Program managers
+  - Enterprise architects
+  - Business analysts
+  - Portfolio managers
+
+Platform
+
+- Principles and patterns for implementing new solutions on the cloud, and migrating on-premises workloads to the cloud.<br />
+  Common roles:
+  - Chief Technology Officer (CTO)
+  - IT managers
+  - Solutions architects
+
+Security
+
+- Ensures organization meets security objectives for visibility, auditability, control, and agility. <br />
+  Common roles:
+  - Chief Information Security Officer (CISO)
+  - IT security managers
+  - IT security analysts
+
+Operations
+
+- Helps enable, run, use, operate, and recover IT workloads to the level agreed upon with business stakeholders.
+  Common roles:
+  - IT operations managers
+  - IT support managers
+
+### Migration Strategies
+
+The 6 R's:
+
+1. Rehosting
+   - “lift-and-shift”
+   - Moving applications without changes <br />
+     Example:
+     - Large legacy migration, in which the company is looking to implement its migration and scale quickly to meet a business case
+2. Replatforming
+   - “lift, tinker, and shift,”
+   - Making a few cloud optimizations to realize a tangible benefit
+3. Refactoring/re-architecting
+   - "re-architecting"
+   - Reimagining how an application is architected and developed by using cloud-native features<br />
+     Example:
+     - Driven by strong business need to add features, scale, or performance
+4. Repurchasing
+   - Moving from a traditional license to a software-as-a-service model<br />
+     Example:
+     - Implement the repurchasing strategy by migrating from a customer relationship management (CRM) system to Salesforce.com
+5. Retaining
+
+   - Keeping apps that are critical for the business in the source environment<br />
+     Example: - Apps that require major refactoring before they can be migrated, or, work that can be postponed until a later time
+
+6. Retiring
+   - Removing applications that are no longer needed
+
+### AWS Snow Family ❄️
+
+Collection of physical devices that help to physically transport up to exabytes of data into and out of AWS.
+
+Composed of these members:
+
+1. <b>AWS Snowcone</b>
+   - Small, rugged, and secure edge computing and data transfer device
+     - 2 CPUs, 4 GB of memory, and 8 TB of usable storage
+2. <b>AWS Snowball</b><br />
+   Offers two types of devices:
+   1. <b>Snowball Edge Storage Optimized</b><br />
+      Well suited for large-scale data migrations and recurring transfer workflows, in addition to local computing with higher capacity needs.
+      - Storage: 80 TB
+      - Compute: 40 vCPUs
+   2. <b>Snowball Edge Compute Optimized</b></br>
+      Powerful computing resources for use cases such as machine learning, full motion video analysis, analytics, and local computing stacks.
+      - Storage: 42-TB
+      - Compute: 52 vCPUs
+3. <b>AWS Snowmobile</b><br />
+   Exabyte-scale data transfer service used to move large amounts of data to AWS.
+   - 100 petabytes of data per Snowmobile
+
+### Innovation with AWS
+
+You are properly equipped to drive innovation in the cloud if you can clearly articulate the following conditions:
+
+- The current state
+- The desired state
+- The problems you are trying to solve
+
+<b>Serverless applications</b><br />
+<b>Artificial applications (AI)</b><br />
+
+- Convert speech to text with Amazon Transcribe.
+- Discover patterns in text with Amazon Comprehend.
+- Identify potentially fraudulent online activities with Amazon Fraud Detector.
+- Build voice and text chatbots with Amazon Lex.<br />
+
+<b>Machine Learning (ML)</b><br />
+
+- Amazon SageMaker empowers you to build, train, and deploy ML models quickly.
+
+## AWS Well-Architected Framework
+
+Understand how to design and operate reliable, secure, efficient, and cost-effective systems in the AWS Cloud.
+
+The Well-Architected Framework is based on five pillars:
+
+1. Operational excellence
+   - Run and monitor systems to deliver business value and continually improve supporting processes and procedures.
+2. Security
+   - Protect information, systems, and assets while delivering business value through risk assessments and mitigation strategies.<br />
+     Apply these best practices:
+     - Automate security best practices when possible.
+     - Apply security at all layers.
+     - Protect data in transit and at rest.
+3. Reliability
+
+   - Testing recovery procedures, scaling horizontally to increase aggregate system availability, and automatically recovering from failure.
+     - Recover from infrastructure or service disruptions
+     - Dynamically acquire computing resources to meet demand
+     - Mitigate disruptions such as misconfigurations or transient network issues
+
+4. Performance efficiency
+   - Use computing resources efficiently to meet system requirements and to maintain that efficiency as demand changes and technologies evolve.
+5. Cost optimization
+   - Run systems to deliver business value at the lowest price point.
 
 <!-- RESOURCES -->
 
