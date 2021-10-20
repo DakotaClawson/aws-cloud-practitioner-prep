@@ -279,6 +279,8 @@ Factors in picking a region:
 
 A single data center or a group of data centers within a Region.
 
+- A fully isolated portion of the AWS global infrastructure.
+
 <b> Edge Location </b>
 
 > <b>Amazon CloudFront</b> <br />
@@ -367,6 +369,12 @@ They remember previous decisions made for incoming packets. <br />
 
 The VPC that checks the packet permissions is known as a <b>Security Group</b>. <br />
 
+<b>Security Group</b><br />
+A virtual firewall that controls inbound and outbound traffic for an Amazon EC2 instance.
+
+- By default denies all inbound traffic and allows all outbound traffic. You can add custom rules to configure which traffic should be allowed or denied.
+  <br />
+
 _Stateful DENIES all inbound traffic by default._ 🔴
 
 ### Global Networking
@@ -378,6 +386,7 @@ The phonebook of the internet! DNS resolution is the process of translating a do
 > a DNS web service. It gives customers a reliable way to route end users to internet applications hosted in AWS.
 >
 > - manage the DNS records for domain names
+> - connect user requests to infrastructure in AWS and outside of AWS
 
 ### Databases and Storage
 
@@ -413,6 +422,8 @@ Each object consists of:
 > - Version control
 
 <b>Amazon S3 Storage Classes</b>
+
+Cannot be attached to Amazon EC2 instances.
 
 When choosing, consider these two factors:
 
@@ -882,10 +893,12 @@ You are properly equipped to drive innovation in the cloud if you can clearly ar
 - Discover patterns in text with Amazon Comprehend.
 - Identify potentially fraudulent online activities with Amazon Fraud Detector.
 - Build voice and text chatbots with Amazon Lex.<br />
+- Amazon Textract is a machine learning service that automatically extracts text and data from scanned documents.
 
 <b>Machine Learning (ML)</b><br />
 
 - Amazon SageMaker empowers you to build, train, and deploy ML models quickly.
+- <b>Amazon Augmented AI (Amazon A2I)</b> provides built-in human review workflows for common machine learning use cases, such as content moderation and text extraction from documents. With Amazon A2I, you can also create your own workflows for machine learning models built on Amazon SageMaker or any other tools.
 
 ## AWS Well-Architected Framework
 
